@@ -1,4 +1,3 @@
-// components/TaskItem.js
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { toggleTaskStatus, deleteTask, setTaskToEdit } from '../redux/taskSlice';
@@ -7,15 +6,15 @@ const TaskItem = ({ task }) => {
   const dispatch = useDispatch();
 
   const handleToggleStatus = () => {
-    dispatch(toggleTaskStatus(task.id)); // Toggle task completion status
+    dispatch(toggleTaskStatus(task.id)); 
   };
 
   const handleDelete = () => {
-    dispatch(deleteTask(task.id)); // Delete task
+    dispatch(deleteTask(task.id)); 
   };
 
   const handleEdit = () => {
-    dispatch(setTaskToEdit(task)); // Set task to edit in Redux
+    dispatch(setTaskToEdit(task)); 
   };
 
   return (

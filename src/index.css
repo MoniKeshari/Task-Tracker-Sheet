@@ -12,19 +12,17 @@ code {
 }
 
 
-/* Sticky Header Styling */
 .header {
   position: sticky;
-  top: 0;  /* Makes the header stick to the top of the page */
-  background-color: #3498db;  /* Blue background color */
-  color: white;  /* Text color white */
+  top: 0; 
+  background-color: #3498db; 
+  color: white;  
   text-align: center;
-  padding: 20px 0;  /* Padding to give some space around the text */
-  z-index: 1000;  /* Ensures the header stays on top of other elements */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Adds a subtle shadow effect */
+  padding: 20px 0;  
+  z-index: 1000;  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
 }
 
-/* Header Text Styling */
 .header h1 {
   font-size: 2.5rem;
   margin: 0;
@@ -34,12 +32,11 @@ code {
   font-size: 1.2rem;
   margin-top: 0.5rem;
   font-weight: 300;
-  margin-bottom: 0; /* Remove default bottom margin */
+  margin-bottom: 0; 
 }
 
-/* Optional: If you want a little padding at the bottom to separate from other content */
 body {
-  margin-top: 0;  /* Remove default top margin from body */
+  margin-top: 0; 
 }
 
 
@@ -79,7 +76,6 @@ body {
 }
 
 
-/* components/TaskItem.css */
 
 .task-item {
   display: flex;
@@ -131,7 +127,6 @@ body {
 }
 
 
-/* components/TaskList.css */
 
 .task-list-container {
   display: flex;
@@ -174,7 +169,6 @@ body {
   gap: 10px;
   overflow-y: auto;
   max-height: 500px;
-  /* Limit task list height */
 }
 
 
@@ -219,9 +213,9 @@ body {
   }
 
   .task-name{
-    width: 121px; /* Set the width limit */
-    word-wrap: break-word; /* Break long words or text that exceeds the width */
-    overflow-wrap: break-word; /* Same as word-wrap but more modern */
+    width: 121px; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
   }
 
 
@@ -242,8 +236,8 @@ body {
 
 @media (max-width: 600px) {
   .task-name{
-    width: 54px; /* Set the width limit */
-    word-wrap: break-word; /* Break long words or text that exceeds the width */
-    overflow-wrap: break-word; /* Same as word-wrap but more modern */
+    width: 54px; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
   }
 }

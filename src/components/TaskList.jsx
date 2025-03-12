@@ -6,9 +6,6 @@ const TaskList = () => {
   const { tasks, filters } = useSelector((state) => state.task);
   const dispatch = useDispatch();
 
-  // Log the tasks state to verify it's updated
-  console.log('Current Tasks:', tasks);
-
   const filteredTasks = tasks
     .filter((task) => {
       if (filters.status === 'completed') return task.completed;

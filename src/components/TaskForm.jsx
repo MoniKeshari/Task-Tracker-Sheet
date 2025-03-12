@@ -1,4 +1,3 @@
-// components/TaskForm.js
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addTask, updateTask, clearTaskToEdit } from '../redux/taskSlice';
@@ -10,7 +9,7 @@ const TaskForm = () => {
 
   useEffect(() => {
     if (taskToEdit) {
-      setTaskName(taskToEdit.name); // Pre-populate input when editing a task
+      setTaskName(taskToEdit.name);
     } else {
       setTaskName('');
     }
@@ -20,19 +19,17 @@ const TaskForm = () => {
     e.preventDefault();
 
     if (!taskName.trim()) {
-      return; // Prevent adding task if input is empty or only spaces
+      return;
     }
 
     if (taskToEdit) {
-      // If editing an existing task
       const updatedTask = {
         ...taskToEdit,
         name: taskName,
       };
       dispatch(updateTask(updatedTask));
-      dispatch(clearTaskToEdit()); // Clear taskToEdit from the state
+      dispatch(clearTaskToEdit());
     } else {
-      // If adding a new task
       const newTask = {
         id: Date.now(),
         name: taskName,
@@ -40,10 +37,10 @@ const TaskForm = () => {
         priority: 'normal',
         category: 'general',
       };
-      dispatch(addTask(newTask)); // Add new task
+      dispatch(addTask(newTask));
     }
 
-    setTaskName(''); // Clear input after submitting
+    setTaskName('');
   };
 
   const handleChange = (e) => {

@@ -4,7 +4,7 @@
 
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
-import store, { persistor } from './redux/store'; // Import persistor
+import store, { persistor } from './redux/store';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
 import Header from './components/Header';
